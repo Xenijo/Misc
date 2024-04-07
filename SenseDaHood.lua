@@ -698,7 +698,7 @@ function EspInterface.Unload()
 end
 
 -- game specific functions
-function getWeapon(player)
+function EspInterface.getWeapon(player)
     local character = player.Character
     if character then
         for _, child in pairs(character:GetChildren()) do
