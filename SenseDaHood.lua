@@ -702,8 +702,9 @@ function getWeapon(player)
   for i,v in pairs(player.Character:GetChildren()) do
    if v:IsA("Tool") then 
       return v.Name 
+      else
+      return "None"
     end
-return "None"
   end
 end
 
