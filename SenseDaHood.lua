@@ -707,8 +707,6 @@ function EspInterface.getWeapon(player)
             end
         end
          return "None"
-    else
-        print("Character is nil for player:", player.Name)
     end
     return nil
 end
