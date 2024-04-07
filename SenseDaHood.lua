@@ -699,14 +699,20 @@ end
 
 -- game specific functions
 function getWeapon(player)
-  for i,v in pairs(player.Character:GetChildren()) do
-   if v:IsA("Tool") then 
-      return v.Name 
-      else
-      return "None"
+    local character = player.Character
+    if character then
+        for _, child in pairs(character:GetChildren()) do
+            if child:IsA("Tool") then
+                return child.Name
+            end
+        end
+         return "None"
+    else
+        print("Character is nil for player:", player.Name)
     end
-  end
+    return nil
 end
+
 
 function EspInterface.isFriendly(player)
 	return player.Team and player.Team == localPlayer.Team;
@@ -729,4 +735,8 @@ function EspInterface.getHealth(player)
 	return 100, 100;
 end
 
+
 return EspInterface;
+
+
+
