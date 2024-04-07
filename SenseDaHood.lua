@@ -699,7 +699,7 @@ end
 
 -- game specific functions
 function EspInterface.getWeapon(player)
-  for i,v in pairs(player.Character:GetChildren()
+  for i,v in pairs(player.Character:GetChildren() do
    if v:IsA("Tool") then 
       return v.Name
     end
