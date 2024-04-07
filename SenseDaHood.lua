@@ -698,13 +698,12 @@ function EspInterface.Unload()
 end
 
 -- game specific functions
-function EspInterface.getWeapon(player)
+function getWeapon(player)
   for i,v in pairs(player.Character:GetChildren()) do
    if v:IsA("Tool") then 
       return v.Name
     end
-  end)
-
+  end
 end
 
 function EspInterface.isFriendly(player)
